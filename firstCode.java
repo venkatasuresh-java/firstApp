@@ -12,5 +12,6 @@ class firstCode{
         num = num * 4;
         num = num * 6;
         num = num * 8;
+
     }
 }
