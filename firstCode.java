@@ -8,5 +8,9 @@ class firstCode{
         int b = 2;
         int num = a+b;
         System.out.println(num);
+
+        num = num * 4;
+        num = num * 6;
+        num = num * 8;
     }
 }
