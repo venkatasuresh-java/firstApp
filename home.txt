@@ -1,0 +1,33 @@
+some code related home page
+
+Git Tags :
+    git tags are like the version names or numbers that we gave , for the set of working code,
+    lets say we have a calc app .
+    
+    a simple calc app is relesed - after some time i wanted to update the app.
+
+         simple app                      - v1.1
+         simple app with some upgrades   - v1.2
+         simple app with some upgrades   - v1.3
+         Finale scientific calculator    - v2.0
+
+         Ex Command :-
+
+            -> git tag  
+                    ( Show Lists of all tags in your local repository.)
+
+            -> git tag -a versionName -m " Version Related Text "
+                    ( Creates an annotated tag. )
+
+            -> git push origin versionName
+                    ( Pushes only that specific tag to GitHub. )
+
+            -> git push origin --tags
+                    ( Pushes all local tags to the remote. )
+
+            -> git push --follow-tags
+                    (
+                         Pushes:
+                        The current branch
+                        Only annotated tags related to the commits being pushed 
+                    )
