@@ -1,1 +1,6 @@
 Some Code
+tages :
+
+    git tag -a versionName -m "Version meassage " 
+    ex:- git tag -a v1.0.1 -m "1st Version"
+    
