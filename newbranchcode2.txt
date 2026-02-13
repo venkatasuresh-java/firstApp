@@ -1,0 +1,143 @@
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git branch
+* main
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git switch -b newbranch
+error: unknown switch `b'
+usage: git switch [<options>] [<branch>]
+
+    -c, --[no-]create <branch>
+                          create and switch to a new branch
+    -C, --[no-]force-create <branch>
+                          create/reset and switch to a branch
+    --[no-]guess          second guess 'git switch <no-such-branch>'
+    --[no-]discard-changes
+                          throw away local modifications
+    -q, --[no-]quiet      suppress progress reporting
+    --[no-]recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --[no-]progress       force progress reporting
+    -m, --[no-]merge      perform a 3-way merge with the new branch
+    --[no-]conflict <style>
+                          conflict style (merge, diff3, or zdiff3)
+    -d, --[no-]detach     detach HEAD at named commit
+    -t, --[no-]track[=(direct|inherit)]
+                          set branch tracking configuration
+    -f, --[no-]force      force checkout (throw away local modifications)
+    --[no-]orphan <new-branch>
+                          new unborn branch
+    --[no-]overwrite-ignore
+                          update ignored files (default)
+    --[no-]ignore-other-worktrees
+                          do not check if another worktree is using this branch
+
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git switch -c newBranch
+Switched to a new branch 'newBranch'
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git branch
+  main
+* newBranch
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git branch -r
+  origin/main
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git branch newBranch1
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git branch
+  main
+* newBranch
+  newBranch1
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git branch -r
+  origin/main
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git branch -a
+  main
+* newBranch
+  newBranch1
+  remotes/origin/main
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git branch     
+* main
+  newBranch
+  newBranch1
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        cls
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git switch -   
+Switched to branch 'newBranch'
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git switch -
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git log --oneline --graph --all --decorate
+* fba2678 (HEAD -> main, origin/main, newBranch1, newBranch)  About Git Tag with Examples
+* fba2678 (HEAD -> main, origin/main, newBranch1, newBranch)  About Git Tag with Examples
+* a56deab (tag: v1.0.2)  About Git Tag with Examples
+* 23f624a (tag: v1.0.1)  Learning about tags
+* 23f624a (tag: v1.0.1)  Learning about tags
+* 893dd4d New File Added
+* e2ec9ce Removed a File By using ( git rm --cached fileName ) Commend
+* 893dd4d New File Added
+* e2ec9ce Removed a File By using ( git rm --cached fileName ) Commend
+* e2ec9ce Removed a File By using ( git rm --cached fileName ) Commend
+* f09ed83 fifty commit
+* f09ed83 fifty commit
+* e56ed69 fourt commit
+* e56ed69 fourt commit
+* a127f01 Third  commit
+* a127f01 Third  commit
+* d42936a Second commit
+* d42936a Second commit
+* 8d86e9e First Commit
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> gitk --all
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        cls
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git branch
+* main
+  newBranch
+  newBranch1
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git switch newBranch
+Switched to branch 'newBranch'
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git status
+On branch newBranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        cls
+        newbranchcode.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git add .\newbranchcode.txt
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git status
+On branch newBranch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   newbranchcode.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        cls
+
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git commit -m "Added a new file in new Branch with branch Topic with commands "
+[newBranch ad9a10a] Added a new file in new Branch with branch Topic with commands
+ 1 file changed, 31 insertions(+)
+ create mode 100644 newbranchcode.txt
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git status
+On branch newBranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        cls
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git switch -               
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> git switch newBranch1      
+Switched to branch 'newBranch1'
+PS C:\Users\Suresh\Desktop\JAVA\firstProject> 
