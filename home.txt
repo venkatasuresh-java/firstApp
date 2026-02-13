@@ -25,7 +25,7 @@ Git Tags :
             -> git push origin --tags
                     ( Pushes all local tags to the remote. )
 
-            -> git push --follow-tags
+            -> git push origin main -follow-tags
                     (
                          Pushes:
                         The current branch
