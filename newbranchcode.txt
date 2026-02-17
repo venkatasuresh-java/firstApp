@@ -1,0 +1,31 @@
+git branch                          - List all local branches
+
+git branch branchName               - Create a new branch (do NOT switch)
+
+git switch branchName               - Switch to an existing branch
+
+git switch -c branchName            - Create and switch to a new branch
+
+git checkout -b branchName          - (Old method) Create and switch branch
+
+git branch -d branchName            - Delete a local branch (safe delete)
+
+git branch -D branchName            - Force delete a local branch
+
+git branch -m newName               - Rename current branch
+
+git branch -m oldName newName       - Rename a specific branch
+
+git branch -r                       - Show remote branches only
+
+git branch -a                       - Show all branches (local + remote)
+
+git branch -vv                      - Show branches with tracking info
+
+git push -u origin branchName       - Push new branch to remote and set upstream
+
+git push origin branchName          - Push branch to remote (no upstream set)
+
+git push origin --delete branchName - Delete branch from remote
+
+git merge branchName                - Merge specified branch into current branch
